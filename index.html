@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>The Good, The Gross, & the absurdly Convenient</title>
+    <!-- Note: next line gets commented out on compile -->
+    <script src="deps/js/closure-library/closure/goog/base.js"></script>
+    <script src="js/deps.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+r
+    <svg width="0" height="0">
+        <defs></defs>
+    </svg>
+</head>
+<body>
+<section id="content" class="container">
+    <br/><br/>
+    <div class="row">
+
+        <div class="" style="text-align: center">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <div class="viz-frame">
+
+                        <div id="viz-container">
+                            <svg width="720" height="1369" viewBox="0 0 720 1369">
+
+
+
+                                <g id="viz" transform="translate(54,54)">
+
+                                    <!-- Title section -->
+                                    <g transform="translate(0,0)">
+                                        <text class="title">
+                                            <tspan x="0" dy="72">the Good,</tspan>
+                                            <tspan x="0" dy="72">the Gross,</tspan>
+                                            <tspan x="0" dy="72">& the absurdly</tspan>
+                                            <tspan x="0" dy="72">Convenient</tspan>
+                                        </text>
+
+
+
+                                        <text y="307" class="hero-text">
+                                            <tspan x="0" dy="27">An interactive comparison of 23,318</tspan>
+                                            <tspan x="0" dy="27">restaurants registered in New York City</tspan>
+                                            <tspan x="0" dy="27">and their listings on Yelp & Seamless.</tspan>
+                                        </text>
+
+                                        <image x="450" y="234" height="162" width="144" xlink:href="images/good-gross-key.svg"/>
+                                    </g>
+
+                                    <!--Column headers-->
+                                    <g transform="translate(0,450)">
+                                        <g class="column-header" transform="translate(0,0)">
+                                            <text x="90" text-anchor="middle" class="header">Yelp</text>
+                                            <text x="90" y="18" text-anchor="middle" class="sub-header">(showing: <tspan id="yelp-toggle" class="toggle">matches</tspan>)</text>
+                                        </g>
+                                        <g class="column-header" transform="translate(217,0)">
+                                            <text x="90" text-anchor="middle" class="header">Seamless</text>
+                                            <text x="90" y="18" text-anchor="middle" class="sub-header">(showing: <tspan id="seamless-toggle" class="toggle">matches</tspan>)</text>
+                                        </g>
+                                        <g class="column-header" transform="translate(434,0)">
+                                            <text x="90" text-anchor="middle" class="header">Misc.</text>
+                                            <!--<text x="90" y="18" text-anchor="middle" class="sub-header">(<tspan id="yelp-toggle" class="toggle">matches</tspan>)</text>-->
+                                        </g>
+
+                                    </g>
+
+
+                                    <!-- Main chart grid -->
+                                    <g id="charts" transform="translate(0,504)">
+
+                                        <g id="chart-yelp_rating" transform="translate(0,0)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >restaurant</tspan><tspan x="180" dy="1em">rating</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-yelp_price" transform="translate(0,180)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >restaurant</tspan><tspan x="180" dy="1em">price</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-yelp_rating_count" transform="translate(0,360)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" ># ratings per</tspan><tspan x="180" dy="1em">restaurant</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+
+
+
+                                        <g id="chart-seamless_rating" transform="translate(217,0)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >restaurant</tspan><tspan x="180" dy="1em">rating</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-seamless_price" transform="translate(217,180)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >restaurant</tspan><tspan x="180" dy="1em">price</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-seamless_rating_count" transform="translate(217,360)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" ># ratings per</tspan><tspan x="180" dy="1em">restaurant</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+
+
+                                        <g id="chart-sanitation_score" transform="translate(434,0)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >sanitation</tspan><tspan x="180" dy="1em">score</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-median_zip_income" transform="translate(434,180)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >neighborhood</tspan><tspan x="180" dy="1em">median</tspan><tspan x="180" dy="1em">income</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-city" transform="translate(434,360)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="180" >borough</tspan><tspan x="180" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+                                        <g id="chart-category" transform="translate(0,540)">
+                                            <g class="chart-container"></g>
+                                            <text y="0" text-anchor="end" class="chart-label">
+                                                <tspan x="612" >cuisine</tspan><tspan x="612" dy="1em" class="reset-button">(reset)</tspan>
+                                            </text>
+                                        </g>
+
+                                    </g>
+                                </g>
+                                <text y="1366" x="718" text-anchor="end"><a xlink:href="http://elih.co" class="link">eli h.</a></text>
+                            </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <div class="" style="text-align: center">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <a target="_blank" href="https://www.facebook.com/dialog/feed?app_id=745730578844888&link=http%3A%2F%2Felih.co%2Fgood-gross-nyc&picture=http%3A%2F%2Felih.co%2Fgood-gross-nyc%2Fimages%2Fgood-gross-thumbnail.png&name=The%20Good%2C%20The%20Gross%2C%20and%20the%20Ridiculously%20Convenient&caption=aka.%20Why%20my%20apartment%20is%20banned%20from%20Yelp&description=An%20interactive%20comparison%20of%20the%2024%2C000%20restaurants%20registered%20in%20New%20York%20City%20and%20their%20listings%20on%20Yelp%20%26%20Seamless.&redirect_uri=http%3A%2F%2Felih.co%2Fgood-gross-nyc" class="btn facebook">Facebook</a>
+                <a target="_blank" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Felih.co%2Fgood-gross-nyc&text=The%20Good%2C%20The%20Gross%2C%20The%20Convenient%3A%20An%20interactive%20comparison%20of%2024%2C000%20NYC%20restaurants%20on%20Yelp%20%26%20Seamless" class="btn twitter">Twitter</a>
+                <a target="_blank" href="http://www.stumbleupon.com/badge?url=http%3A%2F%2Felih.co%2Fgood-gross-nyc&title=The%20Good%2C%20The%20Gross%2C%20The%20Convenient%3A%20An%20interactive%20comparison%20of%2024%2C000%20NYC%20restaurants%20on%20Yelp%20%26%20Seamless" class="btn stumble">Stumble</a>
+                <a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Felih.co%2Fgood-gross-nyc" class="btn googleplus">Google</a>
+                <a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Felih.co%2Fgood-gross-nyc&media=http%3A%2F%2Felih.co%2Fgood-gross-nyc%2Fimages%2Fgood-gross-thumbnail.png&description=An+interactive+comparison+of+the+24%2C000+restaurants+registered+in+New+York+City+and+their+listings+on+Yelp+%26+Seamless" class="btn pinterest">Pinterest</a>
+            </div>
+
+        </div>
+
+    </div>
+    <br/><br/><br/><br/>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h3>About the data:</h3>
+            <p class="data-description">
+                The data set was constructed by combining and matching data from the New York City Deparment of Health and Mental Hygeine (<a href="https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/xx67-kt59?">link</a>), Yelp's API (<a href="http://www.yelp.com/developers">link</a>), and Seamless' website (<a href="http://seamless.com/nyc">link</a>), all collected around late October, 2014.
+                A very special thanks to them for making it available (or, at least, not too difficult to collect).
+            </p>
+            <p class="data-description">The Yelp data started with 42,513 listings that are
+               1) in the "restaurant", "nightlife", or "food" categories,
+               2) in the NYC area (in the geo-square between 40.496032,-74.257450 and 40.9102,-73.697319),
+               and 3) have 1 or more reviews (due to Yelp's API).
+               The latter clause means that un-reviewed restaurants may be listed on Yelp, but weren't included in this data set.
+               The entries were then filtered to remove restaurants that are exclusively in non-relevant categories (e.g. "hotels," "dance clubs," etc.).
+               After the above there are 35,163 entries from Yelp.
+            </p>
+            <p class="data-description">The Seamless data came from the 6,850 restaurant listings in Seamless' NYC website directory.
+               About 254 were closed or otherwise unavailable, leaving 6,596 entries.
+            </p>
+            <p class="data-description">The NYC-DHMH data came from the 23,940 restaurants inspected in the last year.
+                                        622 listings were thrown out due to irregular zip codes or no sanitation score (i.e. it was pending, or some other state), leaving 23,318 restaurants.
+                                        This data was used to determine both a restaurant's sanitation score and it's borough.</p>
+            <p class="data-description">
+                The Yelp and Seamless restaurant entries were then matched to the corresponding NYC-DHMH entry.
+                Matches were determined based on a scoring function, comparing attributes like restaurant name, phone number, street address, etc.
+                The weights of the scoring function were optimized to favor 0 false positive against a small test set (and then spot checked by hand).
+                Of the 23,318 NYC listings, the algorithm found matches for 17,591 Yelp listings and 5,282 Seamless listings (or 4,747 Seamless listings with 1+ rating).
+            </p>
+
+            <p class="data-description">
+            You can view both the matched and unmatched restaurants in the above visualization. Use the link under the "Yelp" and "Seamless" header to toggle matches on and off.
+            </p>
+
+
+        </div>
+
+    </div>
+    <br/><br/>
+
+    <br/><br/><br/><br/>
+    <br/><br/><br/><br/>
+    <br/><br/><br/><br/>
+</section>
+
+</body>
+<script type="text/javascript">
+
+    goog.require('elih.util');
+    goog.require('elih.math');
+    goog.require('goog.dom.ViewportSizeMonitor');
+
+
+</script>
+
+<script type="text/javascript">
+
+var vizContainer= d3.select('#viz-container')[0][0];
+var viz= d3.select('#viz')[0][0]
+
+var vizSvgElements= d3.selectAll('#viz-container svg')[0]
+console.log( vizSvgElements )
+
+//Handle resizing
+var updateVizSize = createVizResizeFn( vizContainer, vizSvgElements )
+updateVizSize();
+var viewportSizeMonitor = new goog.dom.ViewportSizeMonitor();
+goog.events.listen( viewportSizeMonitor, goog.events.EventType.RESIZE, updateVizSize, false, this );
+
+
+
+//Load the data from the file and run the viz
+d3.tsv("data/data.tsv", function(error, data_raw) {
+
+    main( viz, data_raw )
+
+});
+
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-19745547-1', 'auto');
+ga('send', 'pageview');
+
+
+</script>
+</html>

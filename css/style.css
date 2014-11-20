@@ -1,0 +1,405 @@
+
+
+body {
+    /*font: 12px sans-serif;*/
+    background-color: #FBFAF8;
+    font-size: 12px;
+    font-family: Georgia, serif;
+}
+
+.viz-frame {
+    background-color: #FFFFFF;
+}
+
+#viz-container svg {
+    /*border: 1px solid rgba( 0, 0, 0, .05 );*/
+    border: 1px solid #d3d3d3;
+
+}
+
+@media (min-width: 768px) and (min-device-width: 768px) {
+    .viz-frame {
+        border: 1px solid #dddddd;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -webkit-box-shadow: 0px 2px 3px rgba( 0, 0, 0, .15);
+        -moz-box-shadow: 0px 2px 3px  rgba( 0, 0, 0, .15 );
+        box-shadow: 0px 2px 3px  rgba( 0, 0, 0, .15 );
+        padding: 18px;
+    }
+    /*.viz-frame {*/
+        /*padding: 9px;*/
+        /*-moz-box-shadow: 1px 2px 3px  rgba( 0, 0, 0, .05 );*/
+        /*-webkit-box-shadow: 1px 2px 3px  rgba( 0, 0, 0, .05 );*/
+        /*box-shadow: 1px 2px 3px  rgba( 0, 0, 0, .05 );*/
+    /*}*/
+}
+
+#viz .title {
+    font-size: 62px;
+}
+
+#viz .hero-text {
+    font-size: 20px;
+}
+
+
+.column-header text.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.column-header text.sub-header {
+    font-size: 11px;
+    /*font-weight: bold;*/
+}
+.column-header .toggle,
+.reset-button,
+.link {
+    text-decoration: underline;
+    fill: #167791;
+    cursor: pointer;
+    /*font-weight: bold;*/
+}
+
+.out-of-extent {
+    fill-opacity: 0.3;
+    stroke-opacity: 0.3;
+}
+
+.brush .extent {
+    stroke: none;
+    fill-opacity: .03;
+    /*shape-rendering: crispEdges;*/
+}
+
+.brush .resize-handle {
+    stroke: #000;
+    stroke-width: 0.5px;
+}
+
+.brush-tooltip {
+    -webkit-transition: opacity 0.2s;
+    /*-webkit-transition: 0s visibility 2s;*/
+    transition: opacity 0.2s;
+    opacity: 1;
+    /*display: none;*/
+}
+.brush-tooltip.hidden_ {
+    opacity: 0.5;
+    /*display: none;*/
+    /*visibility: hidden;*/
+}
+.brush-tooltip polygon {
+    fill: #fff;
+    fill-opacity: 1;
+    stroke: #000;
+    stroke-width: 1;
+    -webkit-box-shadow: 0px 2px 3px rgba( 255, 0, 0, 1);
+    /*-moz-box-shadow: 0px 2px 3px  rgba( 0, 0, 0, .3 );*/
+    /*box-shadow: 0px 2px 3px  rgba( 0, 0, 0, .3 );*/
+    /*shape-rendering: crispEdges;*/
+}
+
+.brush-tooltip text {
+    fill: #000;
+    fill-opacity: 1;
+    /*shape-rendering: crispEdges;*/
+}
+
+.brush-tooltip text tspan:nth-child(1){
+    font-size: 20px;
+}
+
+.brush-tooltip text tspan:nth-child(2){
+    font-size: 14px;
+}
+
+.brush-tooltip text tspan:nth-child(3){
+    font-size: 14px;
+}
+
+.brush-tooltip text tspan:nth-child(4){
+    font-size: 12px;
+}
+
+
+.bar.chart .reference-line {
+    stroke: #F1F1F2;
+    stroke-width: 1px;
+    stroke-opacity: 1
+}
+
+/*.bar.chart .reference-line.major {*/
+    /*stroke: #F1F1F2;*/
+    /*stroke-opacity: 1*/
+/*}*/
+
+
+.chart-label,
+.chart .reference-line-label {
+    fill: #6D6E70;
+    /*fill-opacity: 0.4;*/
+    font-size: 11px;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+/*.chart .reference-line-label {*/
+    /*fill: #6D6E70;*/
+    /*font-size: 12px;*/
+    /*font-family: Georgia, serif;*/
+/*}*/
+
+.axis-labels text {
+    fill: #555;
+    /*font-weight: bold;*/
+    font-size: 10px;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.chart .border {
+    fill: none;
+    stroke: #F1F1F2;
+    stroke-width: 1px;
+    stroke: none;
+}
+
+.chart .bottom-line {
+    stroke: #000000;
+    stroke-width: 2px;
+}
+
+.chart .marker {
+    fill: #E6E7E8;
+    stroke: #000000;
+    stroke-width: 0.5px;
+}
+
+
+#chart-yelp_rating .marker:first-child,
+#chart-seamless_rating .marker:first-child,
+#chart-yelp_price .marker:first-child,
+#chart-seamless_price .marker:first-child,
+#chart-yelp_rating_count .marker:first-child,
+#chart-seamless_rating_count .marker:first-child{
+    fill: #E6E7E8;
+    /*opacity: 0.5;*/
+}
+
+
+#chart-yelp_rating .marker,
+#chart-seamless_rating .marker {
+    fill: #FFDD17;
+}
+
+#chart-yelp_rating .axis-labels:first-child text,
+#chart-seamless_rating .axis-labels:first-child text {
+    font-size: 10px;
+    fill-opacity: 1;
+    /*font-size: 16px;*/
+    /*font-weight: bold;*/
+}
+
+#chart-yelp_rating .axis-labels text,
+#chart-seamless_rating .axis-labels text {
+    font-size: 8px;
+    fill-opacity: .8;
+    /*font-size: 16px;*/
+    /*font-weight: bold;*/
+}
+
+#chart-median_zip_income .marker {
+    fill: #A8C47A;
+}
+
+#chart-yelp_price .marker,
+#chart-seamless_price .marker
+ {
+    fill: #8BC53F;
+}
+#chart-yelp_price .axis-labels text,
+#chart-seamless_price .axis-labels text {
+    font-size: 9px;
+    /*font-size: 16px;*/
+    /*font-weight: bold;*/
+}
+
+#chart-yelp_rating_count .marker,
+#chart-seamless_rating_count .marker{
+    fill: #B9DDE9;
+}
+
+#chart-sanitation_score .marker.sanitation-A {
+    fill: #5E99BB;
+}
+#chart-sanitation_score .marker.sanitation-B {
+    fill: #72A970;
+}
+#chart-sanitation_score .marker.sanitation-C {
+    fill: #E9B580;
+}
+
+#chart-category .axis-labels text {
+    font-size: 9px;
+}
+
+#chart-category .marker {
+    cursor: pointer;
+}
+
+#chart-city .marker {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.data-description {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+
+
+/** Colors **/
+
+
+.twitter {
+    background-color: rgba( 41, 171, 225, .86 );
+    color: #fff;
+}
+
+.twitter:active,
+.twitter.active,
+.twitter:hover {
+    background-color: rgba( 41, 171, 225, 1 );
+    color: #fff;
+}
+
+.twitter.hard-emboss {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .5), 0 2px #fff;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    background: #41c0f3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#41c0f3), to(#3fbaec));
+    background: -moz-linear-gradient(top, #41c0f3, #3fbaec);
+    background: -o-linear-gradient(top, #41c0f3, #3fbaec);
+    background: -webkit-linear-gradient(top, #41c0f3, #3fbaec);
+    background: linear-gradient(top, #41c0f3, #3fbaec);
+    border: 1px solid #2982a8;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#41c0f3', endColorstr='#3fbaec');
+    text-shadow: 0 -1px #2982a8;
+}
+
+.twitter.hard-emboss:active,
+.twitter.hard-emboss.active,
+.twitter.hard-emboss:hover {
+    background: #3ebaec;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3ebaec), to(#3cb3e3));
+    background: -moz-linear-gradient(top, #3ebaec, #3cb3e3);
+    background: -o-linear-gradient(top, #3ebaec, #3cb3e3);
+    background: -webkit-linear-gradient(top, #3ebaec, #3cb3e3);
+    background: linear-gradient(top, #3ebaec, #3cb3e3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ebaec', endColorstr='#3cb3e3');
+}
+
+.facebook,
+.btn[class*="facebook-"] {
+    background-color: rgba( 31, 102, 159, .86 );
+    color: #fff;
+}
+
+.facebook:active,
+.facebook.active,
+.facebook:hover,
+.btn[class*="facebook-"]:active,
+.btn[class*="facebook-"].active,
+.btn[class*="facebook-"]:hover{
+    background-color: rgba( 31, 102, 159, 1 );
+    color: #fff;
+}
+
+.facebook.hard-emboss,
+.btn[class*="facebook-"].hard-emboss {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .5), 0 2px #fff;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    background: #415ea3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#415ea3), to(#2e4a88));
+    background: -moz-linear-gradient(top, #415ea3, #2e4a88);
+    background: -o-linear-gradient(top, #415ea3, #2e4a88);
+    background: -webkit-linear-gradient(top, #415ea3, #2e4a88);
+    background: linear-gradient(top, #415ea3, #2e4a88);
+    border: 1px solid #09164a;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#415ea3', endColorstr='#2f4a89');
+    text-shadow: 0 -1px #28417a;
+}
+
+.facebook.hard-emboss:active,
+.facebook.hard-emboss.active,
+.facebook.hard-emboss:hover,
+.btn[class*="facebook-"].hard-emboss:active,
+.btn[class*="facebook-"].hard-emboss.active,
+.btn[class*="facebook-"].hard-emboss:hover{
+    background: #3b5695;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3b5695), to(#2a447e));
+    background: -moz-linear-gradient(top, #3b5695, #2a447e);
+    background: -o-linear-gradient(top, #3b5695, #2a447e);
+    background: -webkit-linear-gradient(top, #3b5695, #2a447e);
+    background: linear-gradient(top, #3b5695, #2a447e);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b5695', endColorstr='#2a447e');
+}
+
+
+.pinterest {
+    background-color: rgba( 203, 32, 39, .86 );
+    color: #fff;
+}
+
+.pinterest:active,
+.pinterest.active,
+.pinterest:hover {
+    background-color: rgba( 203, 32, 39, 1 );
+    color: #fff;
+}
+
+.stumble {
+    background-color: rgba( 234, 75, 9, .86 );
+    color: #fff;
+}
+
+.stumble:active,
+.stumble.active,
+.stumble:hover {
+    background-color: rgba( 234, 75, 9, 1 );
+    color: #fff;
+}
+
+.googleplus {
+    background-color: rgba( 207, 67, 41, .86 );
+    color: #fff;
+}
+
+.googleplus:active,
+.googleplus.active,
+.googleplus:hover {
+    background-color: rgba( 207, 67, 41, 1 );
+    color: #fff;
+}
